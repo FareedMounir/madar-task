@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.second.SecondActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/begin_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logo_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+            app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username_hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:text="@string/username"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/age_hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/age"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/username_hint_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/job_hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/job_title"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/age_hint_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/gender_hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/gender"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/job_hint_text" />
+
+        <View
+            android:id="@+id/divider_view"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/gender_hint_text"
+            app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="@+id/begin_guideline"
+            app:layout_constraintTop_toTopOf="@id/username_hint_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/username_hint_text"
+            app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+            app:layout_constraintStart_toEndOf="@+id/divider_view"
+            tools:text="Farid Mounir" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/age_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/age_hint_text"
+            app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+            app:layout_constraintStart_toEndOf="@+id/divider_view"
+            tools:text="24" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/job_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/job_hint_text"
+            app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+            app:layout_constraintStart_toEndOf="@+id/divider_view"
+            tools:text="Android developer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/gender_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/gender_hint_text"
+            app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+            app:layout_constraintStart_toEndOf="@+id/divider_view"
+            tools:text="Male" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
